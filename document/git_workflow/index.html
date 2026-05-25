@@ -622,6 +622,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#resolving-a-push-rejection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolving a Push Rejection
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -841,6 +852,17 @@
     <span class="md-ellipsis">
       
         Step 3 — Push to the Central Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-a-push-rejection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolving a Push Rejection
       
     </span>
   </a>
@@ -1103,13 +1125,39 @@
 </code></pre></div>
 </div>
 <p>A complete single-session cycle looks like this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>clone (once)  →  edit files  →  git add  →  git commit  →  git pull  →  git push
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>                     ↑_______________|  (repeat for each logical change)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>flowchart LR
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    A([Clone once]) --&gt; B[Edit files]
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    B --&gt; C[git add]
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    C --&gt; D[git commit]
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    D --&gt; E{More changes?}
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    E -- Yes --&gt; B
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    E -- No --&gt; F[git pull]
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    F --&gt; G[git push]
+</code></pre></div>
+<h3 id="resolving-a-push-rejection">Resolving a Push Rejection</h3>
+<p>If two developers clone the same version and Developer A pushes first, Developer B's push will be rejected because the remote has moved ahead. Developer B must pull to integrate Developer A's changes before pushing.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sequenceDiagram
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    participant A as Developer A
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    participant R as Central Repository
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    participant B as Developer B
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    R--&gt;&gt;A: git clone (v1)
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    R--&gt;&gt;B: git clone (v1)
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    Note over A: edits files, commits locally
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    A-&gt;&gt;R: git push ✓  (v1 → v2)
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    Note over B: edits files, commits locally
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    B--xR: git push ✗  rejected — remote is now v2
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>    B-&gt;&gt;R: git pull  (fetch v2 + merge)
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>    Note over B: resolve any conflicts,&lt;br/&gt;then commit the merge result
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>    B-&gt;&gt;R: git push ✓  (v2 → v3)
 </code></pre></div>
 <hr />
 <h2 id="handy-commands-for-newcomers">Handy Commands for Newcomers</h2>
 <h3 id="1-inspect-the-commit-log">1. Inspect the Commit Log</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>log
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>log
 </code></pre></div>
 <p>Shows the full commit history — author, date, and message for every commit. Useful flags:</p>
 <p><code>--oneline</code>
@@ -1119,11 +1167,11 @@
 <p><code>--all</code>
 :   Includes commits on every branch, not just the currently checked-out one.</p>
 <p>Combined example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>--all
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>--all
 </code></pre></div>
 <h3 id="2-list-files-under-the-master-branch">2. List Files Under the <code>master</code> Branch</h3>
 <p>To see every file tracked at the tip of <code>master</code> without checking it out:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>ls-tree<span class="w"> </span>-r<span class="w"> </span>--name-only<span class="w"> </span>master
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>ls-tree<span class="w"> </span>-r<span class="w"> </span>--name-only<span class="w"> </span>master
 </code></pre></div>
 <p><code>-r</code>
 :   Recurses into subdirectories so all files at every depth are listed.</p>
@@ -1131,14 +1179,14 @@
 :   Prints just the file paths, omitting blob hashes and mode bits.</p>
 <p>For a bare repository on the server this is the standard way to browse the file tree, since there is no working directory to <code>ls</code> through.</p>
 <h3 id="3-check-the-current-status-of-your-working-tree">3. Check the Current Status of Your Working Tree</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>status
 </code></pre></div>
 <p>Reports which files are staged for the next commit, which are modified but not yet staged, and which are completely untracked. Run this before any <code>git add</code> or <code>git commit</code> to avoid committing unintended changes.</p>
 <h3 id="4-see-exactly-what-changed-before-committing">4. See Exactly What Changed Before Committing</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>diff
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>diff
 </code></pre></div>
 <p>Shows the line-by-line difference between your working tree and the last commit. To compare only what is already staged:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>diff<span class="w"> </span>--staged
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>diff<span class="w"> </span>--staged
 </code></pre></div>
 <p>This lets you review your changes one more time before they become part of the project history.</p>
 
