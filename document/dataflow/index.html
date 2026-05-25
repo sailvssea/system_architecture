@@ -10,31 +10,29 @@
       
       
       
-        <link rel="canonical" href="https://sailvssea.github.io/system_architecture/develop/">
+        <link rel="canonical" href="https://sailvssea.github.io/system_architecture/document/dataflow/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../">
       
-      
-        <link rel="next" href="git_workflow/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Overview - System Architecture</title>
+        <title>Data Flow - System Architecture</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#develop" class="md-skip">
+        <a href="#data-flow" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +92,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="System Architecture" class="md-header__button md-logo" aria-label="System Architecture" data-md-component="logo">
+    <a href="../.." title="System Architecture" class="md-header__button md-logo" aria-label="System Architecture" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Data Flow
             
           </span>
         </div>
@@ -209,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -226,13 +224,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../develop/" class="md-tabs__link">
           
   
   
@@ -248,11 +244,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../document/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -292,7 +290,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="System Architecture" class="md-nav__button md-logo" aria-label="System Architecture" data-md-component="logo">
+    <a href="../.." title="System Architecture" class="md-nav__button md-logo" aria-label="System Architecture" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -310,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -334,31 +332,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -376,7 +371,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -391,37 +386,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../develop/" class="md-nav__link">
         
   
   
@@ -437,37 +405,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -480,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="git_workflow/" class="md-nav__link">
+      <a href="../../develop/git_workflow/" class="md-nav__link">
         
   
   
@@ -512,28 +449,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -551,7 +491,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -569,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -594,10 +534,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../document/dataflow/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -613,6 +580,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage Descriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-space-segment-downlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Space Segment — Downlink
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cas-ciomp-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. CAS / CIOMP Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hkust-climet-gpu-server-data-ingestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. HKUST CliMet GPU Server — Data Ingestion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-modtran-computation-cpu-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. MODTRAN Computation — CPU Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-storage-and-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Storage and Archiving
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -652,13 +722,85 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#overview-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting Started
+        Overview Diagram
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stage-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage Descriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-space-segment-downlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Space Segment — Downlink
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cas-ciomp-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. CAS / CIOMP Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hkust-climet-gpu-server-data-ingestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. HKUST CliMet GPU Server — Data Ingestion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-modtran-computation-cpu-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. MODTRAN Computation — CPU Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-storage-and-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Storage and Archiving
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -679,10 +821,100 @@
 
 
 
-<h1 id="develop">Develop</h1>
-<p>Development guides and technical references for MUSICO.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>Add your development documentation here.</p>
+<h1 id="data-flow">Data Flow</h1>
+<p>This page describes the end-to-end data flow for the MUSICO project, from the instrument payload on the China Space Station through to final data products computed at HKUST.</p>
+<h2 id="overview-diagram">Overview Diagram</h2>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Space ["Space Segment"]
+        CSS["MUSICO Payload\n(China Space Station)"]
+    end
+
+    subgraph CAS_Group ["CAS / CIOMP  ·  China"]
+        PrivateCloud["CAS Private Cloud"]
+        CIOMP["CIOMP Processing\n(Remove Sensitive Information)"]
+        PublicCloud["Public Cloud"]
+    end
+
+    subgraph External ["External Data Sources"]
+        OtherSrc["Pressure-level Temperature\nCO₂ / CH₄ / etc."]
+    end
+
+    subgraph HKUST_Group ["HKUST CliMet"]
+        NAS["CliMet NAS Server\n(Calibration Data · Historical Archive)"]
+        GPU["CliMet GPU Server\n(Raw / Product Data — latest 1 week)"]
+        CPU["CliMet CPU Server\n(MODTRAN)"]
+    end
+
+    CSS --&gt;|"downlink"| PrivateCloud
+    PrivateCloud --&gt; CIOMP
+    CIOMP --&gt;|"sanitised MUSICO data"| PublicCloud
+    CIOMP --&gt;|"calibration data / instrument info"| NAS
+    PublicCloud --&gt;|"HKUST MUSICO Dev Team fetches"| GPU
+    NAS --&gt;|"mount"| GPU
+    OtherSrc --&gt;|"download"| GPU
+    GPU --&gt;|"package &amp; push via SSH\ninvoke MODTRAN"| CPU
+    CPU --&gt;|"computation results via SSH"| GPU
+    GPU -.-&gt;|"archive historical data"| NAS</code></pre>
+<blockquote>
+<p>Solid arrows represent active data transfers; the dashed arrow represents periodic archiving.</p>
+</blockquote>
+<hr />
+<h2 id="stage-descriptions">Stage Descriptions</h2>
+<h3 id="1-space-segment-downlink">1. Space Segment — Downlink</h3>
+<p>The MUSICO instrument aboard the <strong>China Space Station (CSS)</strong> continuously acquires measurements. Raw telemetry and science data are downlinked to the <strong>CAS Private Cloud</strong> through the CSS ground segment.</p>
+<h3 id="2-cas-ciomp-processing">2. CAS / CIOMP Processing</h3>
+<p><strong>CIOMP</strong> (Changchun Institute of Optics, Fine Mechanics and Physics) receives the raw data from the CAS Private Cloud and performs the following:</p>
+<ul>
+<li>Removes operationally sensitive or export-controlled information.</li>
+<li>Packages the sanitised science data and forwards it to a <strong>Public Cloud</strong> endpoint accessible by HKUST.</li>
+<li>Uploads MUSICO <strong>calibration data and instrument information</strong> directly to the <strong>HKUST CliMet NAS Server</strong> for reference during retrieval processing.</li>
+</ul>
+<h3 id="3-hkust-climet-gpu-server-data-ingestion">3. HKUST CliMet GPU Server — Data Ingestion</h3>
+<p>The <strong>HKUST MUSICO Development Team</strong> fetches the sanitised MUSICO data from the Public Cloud to the <strong>CliMet GPU Server</strong>. Concurrently, ancillary atmospheric data required for retrievals are downloaded to the same server:</p>
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Example sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pressure-level temperature profiles</td>
+<td>ERA5 / MERRA-2</td>
+</tr>
+<tr>
+<td>Carbon dioxide (CO₂) columns</td>
+<td>NOAA, Copernicus</td>
+</tr>
+<tr>
+<td>Methane (CH₄) columns</td>
+<td>NOAA, Copernicus</td>
+</tr>
+</tbody>
+</table>
+<p>Calibration data held on the <strong>CliMet NAS Server</strong> are made available to the GPU Server via a network mount.</p>
+<h3 id="4-modtran-computation-cpu-server">4. MODTRAN Computation — CPU Server</h3>
+<p>After ingestion and pre-processing, the GPU Server <strong>packages</strong> the required inputs and <strong>pushes them via SSH</strong> to the <strong>CliMet CPU Server</strong>, which hosts the <a href="http://modtran.spectral.com/">MODTRAN</a> radiative-transfer software. MODTRAN executes the forward-model or retrieval computation and <strong>returns the results to the GPU Server via SSH</strong>.</p>
+<h3 id="5-storage-and-archiving">5. Storage and Archiving</h3>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw and product data — <strong>latest 1 week</strong></td>
+<td>CliMet GPU Server (online, fast access)</td>
+</tr>
+<tr>
+<td><strong>Historical</strong> raw and product data</td>
+<td>CliMet NAS Server (archived, bulk storage)</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -738,10 +970,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
