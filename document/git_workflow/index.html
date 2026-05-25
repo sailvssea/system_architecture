@@ -1095,10 +1095,13 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div>
 <p>If the central repository uses <code>main</code> as the default branch, substitute <code>main</code> for <code>master</code>.</p>
-<p><strong>Before pushing</strong>, it is good practice to pull in any changes that teammates may have pushed since your last sync, to avoid conflicts:</p>
+<div class="admonition warning">
+<p class="admonition-title">Pull before you push</p>
+<p>Always pull in any changes that teammates may have pushed since your last sync before pushing, to avoid conflicts:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>master
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div>
+</div>
 <p>A complete single-session cycle looks like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>clone (once)  →  edit files  →  git add  →  git commit  →  git pull  →  git push
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>                     ↑_______________|  (repeat for each logical change)
