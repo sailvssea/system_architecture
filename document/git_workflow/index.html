@@ -529,6 +529,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#key-differences-bare-vs-normal-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Differences: Bare vs. Normal Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#typical-directory-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -666,17 +677,6 @@
     <span class="md-ellipsis">
       
         4. See Exactly What Changed Before Committing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#key-differences-bare-vs-normal-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Differences: Bare vs. Normal Repository
       
     </span>
   </a>
@@ -754,6 +754,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#key-differences-bare-vs-normal-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Differences: Bare vs. Normal Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#typical-directory-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -897,17 +908,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#key-differences-bare-vs-normal-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Differences: Bare vs. Normal Repository
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -961,6 +961,43 @@
 <tr>
 <td>Backup and mirroring</td>
 <td>A bare clone (<code>git clone --mirror</code>) reproduces every ref exactly, making it the correct form for backup targets and read-only mirrors.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-differences-bare-vs-normal-repository">Key Differences: Bare vs. Normal Repository</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Normal repository</th>
+<th>Bare repository</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Working tree</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>.git/</code> subdirectory</td>
+<td>Yes</td>
+<td>Contents are at root</td>
+</tr>
+<tr>
+<td>Direct file editing</td>
+<td>Yes</td>
+<td>Not applicable</td>
+</tr>
+<tr>
+<td>Accepts <code>git push</code></td>
+<td>Restricted</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Intended use</td>
+<td>Development workstation</td>
+<td>Central server / remote</td>
 </tr>
 </tbody>
 </table>
@@ -1101,44 +1138,6 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>diff<span class="w"> </span>--staged
 </code></pre></div>
 <p>This lets you review your changes one more time before they become part of the project history.</p>
-<hr />
-<h3 id="key-differences-bare-vs-normal-repository">Key Differences: Bare vs. Normal Repository</h3>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Normal repository</th>
-<th>Bare repository</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Working tree</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>.git/</code> subdirectory</td>
-<td>Yes</td>
-<td>Contents are at root</td>
-</tr>
-<tr>
-<td>Direct file editing</td>
-<td>Yes</td>
-<td>Not applicable</td>
-</tr>
-<tr>
-<td>Accepts <code>git push</code></td>
-<td>Restricted</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Intended use</td>
-<td>Development workstation</td>
-<td>Central server / remote</td>
-</tr>
-</tbody>
-</table>
 
 
 
