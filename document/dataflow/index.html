@@ -882,9 +882,8 @@
     GPU --&gt;|"package &amp; push via SSH\ninvoke MODTRAN"| CPU
     CPU --&gt;|"computation results via SSH"| GPU
     GPU -.-&gt;|"archive historical data"| NAS
-    GPU --&gt;|"data products"| VIC
-    GPU --&gt;|"data products"| Portal
-    NAS -.-&gt;|"historical data products"| Portal</code></pre>
+    NAS --&gt;|"data products"| VIC
+    NAS --&gt;|"data products"| Portal</code></pre>
 <blockquote>
 <p>Solid arrows represent active data transfers; dashed arrows represent periodic or on-demand access.</p>
 </blockquote>
@@ -946,11 +945,11 @@
 </tbody>
 </table>
 <h3 id="6-downstream-applications">6. Downstream Applications</h3>
-<p>Processed data products served from the GPU Server (and historical products from the NAS) feed two end-user facing systems:</p>
+<p>Processed data products served from the NAS Server feed two end-user facing systems:</p>
 <p><strong>HKUST Visitor Information Center</strong>
 : Displays near-real-time MUSICO data products — such as atmospheric trace-gas maps or retrieval visualisations — for public outreach and on-site exhibition purposes.</p>
 <p><strong>Data Download / Visualisation Portal</strong>
-: A web-based platform allowing registered users to browse, visualise, and download MUSICO data products. Recent products are served directly from the GPU Server; historical products are retrieved on demand from the NAS archive.</p>
+: A web-based platform allowing registered users to browse, visualise, and download MUSICO data products served from the NAS Server.</p>
 
 
 
