@@ -732,7 +732,7 @@
     OtherSrc --&gt;|"download"| GPU
     GPU --&gt;|"package &amp; push via SSH\ninvoke MODTRAN"| CPU
     CPU --&gt;|"computation results via SSH"| GPU
-    GPU -.-&gt;|"archive historical data"| NAS
+    PublicCloud -.-&gt;|"archive historical data"| CPU
     NAS --&gt;|"data products"| VIC
     NAS --&gt;|"data products"| Portal
 
