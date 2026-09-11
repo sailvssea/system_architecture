@@ -2,26 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sailvssea.github.io/system_architecture/</loc>
-         <lastmod>2026-05-30</lastmod>
+         <lastmod>2026-09-11</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sailvssea.github.io/system_architecture/develop/</loc>
-         <lastmod>2026-05-30</lastmod>
+         <lastmod>2026-09-11</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sailvssea.github.io/system_architecture/develop/git_workflow/</loc>
-         <lastmod>2026-05-30</lastmod>
+         <lastmod>2026-09-11</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sailvssea.github.io/system_architecture/document/</loc>
-         <lastmod>2026-05-30</lastmod>
+         <lastmod>2026-09-11</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sailvssea.github.io/system_architecture/document/dataflow/</loc>
-         <lastmod>2026-05-30</lastmod>
+         <lastmod>2026-09-11</lastmod>
+         <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sailvssea.github.io/system_architecture/product/</loc>
-         <lastmod>2026-05-30</lastmod>
+         <lastmod>2026-09-11</lastmod>
+         <changefreq>daily</changefreq>
     </url>
 </urlset>
