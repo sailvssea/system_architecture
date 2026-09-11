@@ -699,6 +699,7 @@
     end
 
     subgraph CAS_Group ["CAS / CIOMP  ·  China"]
+        direction LR
         PrivateCloud["CAS Private Cloud"]
         CIOMP["CIOMP Processing\n(Remove Sensitive Information)"]
         PublicCloud["Public Cloud"]
@@ -709,17 +710,20 @@
     end
 
     subgraph HKUST_Group ["HKUST CliMet"]
+        direction LR
         NAS["CliMet NAS Server\n(Calibration Data · Historical Archive)"]
         GPU["CliMet GPU Server\n(Raw / Product Data — latest 1 week)"]
         CPU["CliMet CPU Server\n(MODTRAN)"]
     end
 
     subgraph Downstream ["Downstream Applications"]
+        direction LR
         VIC["HKUST Visitor\nInformation Center"]
         Portal["Data Download /\nVisualisation Portal"]
     end
 
     CSS --&gt;|"downlink"| PrivateCloud
+    CSS --- OtherSrc
     PrivateCloud --&gt; CIOMP
     CIOMP --&gt;|"sanitised MUSICO data"| PublicCloud
     CIOMP --&gt;|"calibration data / instrument info"| NAS
@@ -732,7 +736,8 @@
     NAS --&gt;|"data products"| VIC
     NAS --&gt;|"data products"| Portal
 
-    linkStyle 5 stroke:#00e676,stroke-width:2px</code></pre>
+    linkStyle 1 stroke:none
+    linkStyle 6 stroke:#00e676,stroke-width:2px</code></pre>
 <blockquote>
 <p>Solid arrows represent active data transfers; dashed arrows represent periodic or on-demand access.</p>
 </blockquote>
